@@ -4,20 +4,28 @@ export class Searchpage {
     readonly searchFieldText: Locator;
     readonly selectProject: Locator;
     readonly projectSearchField: Locator;
+    readonly enterSearch: Locator;
   
 
     constructor(page: Page) {
         this.page = page;
         this.searchFieldText = page.locator('#q');
-        this.selectProject = page.locator('#project-jump');
-        this.projectSearchField = page.locator('#projects-quick-search');
+        this.enterSearch = page.locator('#q');
         }
+       // this.selectProject = page.locator('#project-jump');
+       // this.projectSearchField = page.locator('#projects-quick-search');
+      
 
         async goto() {
-            await this.page.goto('https://www.redmine.org/');
+          await this.page.goto('https://www.redmine.org/');
           }
+
+        async pressEnter() {
+          await this.enterSearch.press('Enter');
+        }
+      }
         
-          async searchText() {
+       /*   async searchText() {
             await this.searchFieldText.click();
           }
 
@@ -28,5 +36,5 @@ export class Searchpage {
        // await this.projectSearchField.fill(projectSearchField);
         
 
-    }
-}
+    } */
+      

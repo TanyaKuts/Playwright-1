@@ -6,8 +6,8 @@ test('successful register', async ({ page }) => {
 
   await registerPage.goto();
   await registerPage.registerLink.click();
-  await registerPage.register('gideon center', '12345678', '12345678', 'First', 'Last', 'gideoncenter@gmail.com');
-  //await expect(page.locator('#errorExplanation')).toHaveText('Login is invalid', 'Password doesn't match confirmation');
+  await registerPage.register('gideon3', '12345678', '12345678', 'First', 'Last', 'gideoncenter3@gmail.com');
+  await expect(page.locator('#flash_notice')).toHaveText('Account was successfully created. An email containing the instructions to activate your account was sent to gideoncenter3@gmail.com.');
 })
 
 test('invalid password confirmation register', async ({ page }) => {

@@ -6,8 +6,9 @@ test('project search', async ({ page }) => {
 
   await searchPage.goto();
   await searchPage.searchFieldText.fill('Github');
-  await searchPage.selectProject.click();
-  await searchPage.projectSearchField.fill('project');
+  await searchPage.enterSearch.press('Enter');
+ // await searchPage.selectProject.click();
+ // await searchPage.projectSearchField.fill('project');
  // await expect(page.locator('#flash_error')).toHaveText('Invalid user or password');
 
 })
