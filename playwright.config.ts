@@ -33,7 +33,7 @@ export default defineConfig({
     // video, screenshots
     video: 'on',
     screenshot: 'on',
-    headless: false, 
+    headless: true, 
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on', //-first-retry',
