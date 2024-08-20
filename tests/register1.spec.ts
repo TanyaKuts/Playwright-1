@@ -6,7 +6,7 @@ test('successful register', async ({ page }) => {
 
   await registerPage.goto();
   await registerPage.registerLink.click();
-  await registerPage.register('gideon3', '12345678', '12345678', 'First', 'Last', 'gideoncenter3@gmail.com');
+  await registerPage.register('gideon4', '12345678', '12345678', 'First', 'Last', 'gideoncenter4@gmail.com');
   await expect(page.locator('#flash_notice')).toHaveText('Account was successfully created. An email containing the instructions to activate your account was sent to gideoncenter3@gmail.com.');
 })
 
